@@ -1,0 +1,16 @@
+gcloud container clusters get-credentials avtarsingh-cluster-1 --region australia-southeast1 --project sit737-23t1-avtar-sing-2687dd6
+
+
+docker pull node
+docker build -t my-web-app .
+
+docker pull avtarsingh221370753/sit737-cloud-native-applications:my-web-app
+
+https://hub.docker.com/layers/avtarsingh221370753/sit737-cloud-native-applications/my-web-app
+
+docker login --username=avtarsingh@deakin.edu.au --password-stdin=Soniarani@12345
+
+echo Soniarani@12345 |docker login --username=avtarsingh221370753 --password-stdin
+
+kubectl apply -f createDeployment.yaml
+kubectl apply -f createService.yaml
